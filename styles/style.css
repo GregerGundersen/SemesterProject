@@ -1,0 +1,363 @@
+/* CSS Variables */
+:root {
+    --HeaderFooter: #175676;
+    --White: #FFFFFF;
+    --Black: #000000;
+    --FooterFont: #E6C9A5;
+    --Accent: #BA324F;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+html p {
+    font-family: 'Roboto', sans-serif;
+}
+
+html h1 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 600;
+    color: var(--HeaderFooter);
+}
+
+html h2 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 500;
+    color: var(--HeaderFooter);
+    font-size: 2rem;
+}
+
+html a{
+    font-family: 'Barlow Condensed','sans-serif';
+}
+
+body {
+    background-color: var(--White);
+    margin: 0px 50px;
+    line-height: 1,4;
+}
+
+.wrapper {
+    display: grid;
+    grid-gap: 20px;
+}
+
+/* NAVIGATION */
+.main-nav ul{
+    display: grid;
+    padding: 0;
+    list-style: none;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.main-nav a{
+    display: block;
+    text-decoration: none;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.4rem;
+    font-family: 'Barlow Condensed', 'sans-serif';
+    font-weight: 600;
+    color: black;
+}
+
+#menu1:hover{
+    background-color: #264653;
+    color: white;
+} 
+
+#menu2:hover{
+    background-color: #2A9D8F;
+    color: white;
+} 
+
+#menu3:hover{
+    background-color: #E9C46A;
+    color: white;
+} 
+
+#menu4:hover{
+    background-color: #F4A261;
+    color: white;
+} 
+
+#menu5:hover{
+    background-color: #E76F51;
+    color: white;
+} 
+
+#menu6:hover{
+    background-color: #EA4B23;
+    color: white;
+} 
+/* NAVIGATION END */
+
+/*INDEX - TOP CONTAINER */
+header {
+    background-image: url(../media/MuseumExterior.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 37vw;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: flex-end;
+}
+/* TOP CONTAINER END */
+
+
+/*INDEX - INTRODUCTION */
+.introduction {
+    display: grid;
+    grid-template-areas: 
+    'image text'
+    'image text'
+;
+}
+.imagecontainer {
+    grid-area: image;
+}
+
+.imagecontainer img{
+    width:25vw;
+    margin-top: 2.6rem;
+}
+.introductiontext {
+    grid-area: text;
+    padding: 2rem;
+}
+.introductiontext h1{
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.introductiontext h1::after{
+    display: block;
+    width: 80%;
+    height: 6px;
+    background-color: var(--Accent);
+    content: "";
+    border-radius: 3px;
+    max-width: 220px;
+    margin-top: 5px;
+}
+
+/* INTRODUCTION END */
+
+/*INDEX - SECONDARY NAVIGATION */
+
+.secondary-nav {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+    margin: 50px 0;
+}
+
+.secondary-nav a{
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.4rem;
+    padding: 3rem;
+}
+
+
+#submenu1 {
+    background-color: #264653;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#submenu2 {
+    text-align: center;
+    background-color: #2A9D8F;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+#submenu3 {
+    text-align: center;
+    background-color: #E9C46A;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+#submenu4 {
+    text-align: center;
+    background-color: #F4A261;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+#submenu5 {
+    text-align: center;
+    background-color: #E76F51;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+#submenu6 {
+    text-align: center;
+    background-color: #EA4B23;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+#submenu1:hover{
+    color: #264653;
+    background-color: white;
+}
+#submenu1 a:hover{
+    color:#264653
+}
+
+#submenu2:hover{
+    background-color: white;
+}
+
+#submenu2 a:hover{
+    color: #2A9D8F;
+}
+
+#submenu3:hover{
+    background-color: white;
+}
+
+#submenu3 a:hover{
+    color: #E9C46A;
+}
+
+#submenu4:hover{
+    background-color: white;
+}
+
+#submenu4 a:hover{
+    color:#F4A261;
+}
+#submenu5:hover{
+    background-color: white;
+}
+#submenu5 a:hover{
+    color: #E76F51;
+}
+
+#submenu6:hover{
+    background-color: white;
+}
+#submenu6 a:hover{
+    color:#EA4B23;
+}
+/* SECONDARY NAVIGATION END */
+
+/*INDEX - BOTTOM CONTENT - FOR CHILDREN/TEACHER/RESEARCHERS */
+
+
+.indexbottom{
+    display: grid;
+    grid-template-areas: 
+    'child    teacher'
+    'research research';
+    grid-gap: 20px;
+}
+
+.forchildren{
+    grid-area: child;
+    margin-top: 9rem;
+}
+
+.forteachers{
+    grid-area: teacher;
+}
+
+.researchers{
+    grid-area: research;
+}
+
+#childpic{
+    width:100%;
+}
+
+#teacherpic{
+    width:70%;
+}
+
+#researcherpic{
+    width: 100%;
+}
+
+/* BOTTOM CONTENT END */
+
+/* FOOTER */
+
+footer {
+    background-color: #175676;
+    color: white;
+}
+
+/* MEDIA QUERIES */
+
+/* TABLET QUERIES (iPad Pro, 834px) */
+@media (max-width: 900px) {
+
+    .main-nav ul{
+        grid-template-columns: repeat(3,1fr);
+        margin: 0;
+    }
+
+    .main-nav a{
+        padding: 0.5rem;
+        font-size: 1.2rem;
+
+    }
+
+    .secondary-nav {
+        grid-template-columns: repeat(auto-fit, minmax(190px,1fr));
+    }
+
+    .indexbottom{
+        grid-template-areas: 
+        'child'
+        'teacher'
+        'research';
+    }
+}
+
+/* PHONE QUERIES(iPhone 8, 414px) */
+@media (max-width: 420px) {
+
+    body{
+        margin: 0px 10px;
+    }
+
+    .introduction {
+        grid-template-areas: 
+        'image'
+        'text';
+    ;
+    }
+    .imagecontainer img{
+        margin-left: 2rem;
+        margin-top: 1.2rem;
+        width: 50vw;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
