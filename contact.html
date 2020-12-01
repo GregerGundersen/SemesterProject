@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSM|Events</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600&family=Roboto&display=swap" rel="stylesheet"> 
+    <script src="https://kit.fontawesome.com/8959b83462.js" crossorigin="anonymous"></script>
+    <meta name="description" content="Welcome to the Community Science Museum. Read more about our special events and guest speakers. Only available for a limited time.">
+    <meta name="author" content="Rolf Greger Gundersen">
+    <meta name="keywords" content="Museum, Technology, Children, Parents, Exhibitions, Events">
+</head>
+<body>
+    <div class="wrapper">
+        <nav class="main-nav">
+            <ul>
+                <li><a id="menu1" href="index.html">Home</a></li>
+                <li><a id="menu2" href="exhibitions.html">Exhibitions</a></li>
+                <li><a id="menu3" href="events.html">Events</a></li>
+                <li><a id="menu4" href="visit.html">Visit</a></li>
+                <li><a id="menu5" href="getinvolved.html">Get Involved</a></li>
+                <li><a id="menu6" href="contact.html">Contact</a></li>
+            </ul>
+        </nav><!-- Main Nav Closing -->
+        <header class="contactheader">
+          
+        </header>
+        <main class="contactintro">
+            <h1>Contact</h1>
+            <ul class="contact">
+                <li>Community Science Museum</li>
+                <li>Solliåsen 6, 4818 Færvik</li>
+                <li>Tel: +47 959 45 784</li>
+                <li>E-Mail: museum@post.com</li>
+            </ul>
+        </main>
+        <div class="contactform">
+            <h2>Contact Form</h2>
+            <p>Do you have questions, feedback or wish to apply for a position as intern 
+                or volunteer? Please send us a message.</p>
+            <form action="/actionpage.php" id="contactus">
+                <ul>
+                <li>
+                    <select>
+                        <option value="Purpose of contact" selected>Purpose of contact</option>
+                        <option value="Volunteer">Volunteer</option>
+                        <option value="Internship">Internship</option>
+                        <option value="Feedback">Feedback</option>
+                        <option value="Questions">Questions</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="firstname">First Name</label>
+                </li>
+                <li>
+                    <input id="firstname" name="firstname" type="text">
+                </li>
+                <li>
+                    <label for="lastname">Last Name</label>
+                </li>
+                <li>
+                    <input id="lastname" name="lastname" type="text">
+                </li>
+                <li>
+                    <label for="address">Address</label>
+                </li>
+                <li>
+                    <input id="address" name="address" type="text">
+                </li>
+                <li>
+                    <label for="email">E-Mail</label>
+                </li>
+                <li>
+                    <input id="email" name="email" type="email">
+                </li>
+                <li>
+                    <label for="Message">Message</label>
+                </li>
+                <li>
+                    <textarea form="contactus" name="message" placeholder="Enter message here..."></textarea>
+                </li>
+                </ul>
+
+            </form>
+        </body>
