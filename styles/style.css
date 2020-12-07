@@ -1,6 +1,6 @@
 /* CSS Variables */
 :root {
-    --primary-color: rgba(13,110,139,0.75);
+    --primary-color: rgba(23, 86, 118, 0.75); /* Identical to --HeaderFooter */
     --overlay-color: rgba(24,39,51,0.85);
     --menu-speed: 0.75s;
     --HeaderFooter: #175676;
@@ -10,6 +10,7 @@
     --Accent: #BA324F;
     --Background: #FFF5E6;
     --shadow: 0 1px 3px rgba(104, 104, 104, 0.8);
+    /* PRIMARY OLD COLOR:    --primary-color: rgba(13,110,139,0.75); */
 }
 
 html {
@@ -102,8 +103,18 @@ body {
     height: 61px;
     width: 61px;
     padding: 0;
+}
 
-
+#logomobile{
+    background-image: url(../media/StaticLogo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 100px;
+    margin: auto;
 }
 
 #logo:hover{
@@ -171,15 +182,6 @@ body {
         height: 100%;
         z-index: -1;
     }
-
-/*     .showcase .showcase-inner{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        height: 100%;
-    } */
 
     .menu-wrap{
         position: fixed;
@@ -310,6 +312,25 @@ body {
     .menu-wrap .toggler:checked ~ .menu > div > div{
         opacity: 1;
         transition: opacity 0.4 ease;
+    }
+
+    #menuheader{
+        font-size: 2.5rem;
+        font-weight: 600;
+        color: white;
+    }
+
+    #menuheader:after{
+        display: block;
+        width: 80%;
+        height: 6px;
+        background-color: var(--Accent);
+        content: "";
+        border-radius: 3px;
+        max-width: 300px;
+        margin:auto;
+        margin-top: 5px;
+        
     }
 }
 
