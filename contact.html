@@ -16,6 +16,7 @@
     <div class="wrapper">
         <nav class="main-nav">
             <ul>
+                <li><a href="index.html" id="logo"></a></li>
                 <li><a id="menu1" href="index.html">Home</a></li>
                 <li><a id="menu2" href="exhibitions.html">Exhibitions</a></li>
                 <li><a id="menu3" href="events.html">Events</a></li>
@@ -29,59 +30,73 @@
         </header>
         <main class="contactintro">
             <h1>Contact</h1>
-            <ul class="contact">
+            <table>
+                <tr><th>Community Science Museum</th></tr>
+                <tr><th>Address</th><td>Solliåsen 6, 4818 Færvik</td></tr>
+                <tr><th>Phone</th><td>+47 959 45 784</td></tr>
+                <tr><th>E-Mail</th><td>museum@post.com</td></tr>
+            </table>   
+<!--             <ul class="contact">
                 <li>Community Science Museum</li>
                 <li>Solliåsen 6, 4818 Færvik</li>
                 <li>Tel: +47 959 45 784</li>
                 <li>E-Mail: museum@post.com</li>
-            </ul>
+            </ul> -->
         </main>
-        <div class="contactform">
-            <h2>Contact Form</h2>
-            <p>Do you have questions, feedback or wish to apply for a position as intern 
-                or volunteer? Please send us a message.</p>
-            <form action="/actionpage.php" id="contactus">
+        <h2 class="nomargin lh1">Contact Form</h2>
+        <p class="nomargin lh01">Do you have questions, feedback or wish to apply for a position as intern 
+            or volunteer?</p>
+        <p class="nomargin">Please send us a message.</p>
+        <div class="flexform">
+            <div class="contactform">
+                <form action="/actionpage.php" id="contactus">
+                    <ul>
+                        <li class="label">
+                            <label for="firstname">First Name</label>
+                        </li>
+                        <li>
+                            <input id="firstname" name="firstname" type="text">
+                        </li>
+                        <li class="label">
+                            <label for="lastname">Last Name</label>
+                        </li>
+                        <li>
+                            <input id="lastname" name="lastname" type="text">
+                        </li>
+                        <li class="label">
+                            <label for="address">Address</label>
+                        </li>
+                        <li>
+                            <input id="address" name="address" type="text">
+                        </li>
+                        <li class="label">
+                            <label for="email">E-Mail</label>
+                        </li>
+                        <li>
+                            <input id="email" name="email" type="email">
+                        </li>
+                        <li class="label">
+                            <select>
+                                <option value="Purpose of contact" selected>Purpose of contact</option>
+                                <option value="Volunteer">Volunteer</option>
+                                <option value="Internship">Internship</option>
+                                <option value="Feedback">Feedback</option>
+                                <option value="Questions">Questions</option>
+                            </select>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+            <div class="textbox">
                 <ul>
-                <li>
-                    <select>
-                        <option value="Purpose of contact" selected>Purpose of contact</option>
-                        <option value="Volunteer">Volunteer</option>
-                        <option value="Internship">Internship</option>
-                        <option value="Feedback">Feedback</option>
-                        <option value="Questions">Questions</option>
-                    </select>
-                </li>
-                <li>
-                    <label for="firstname">First Name</label>
-                </li>
-                <li>
-                    <input id="firstname" name="firstname" type="text">
-                </li>
-                <li>
-                    <label for="lastname">Last Name</label>
-                </li>
-                <li>
-                    <input id="lastname" name="lastname" type="text">
-                </li>
-                <li>
-                    <label for="address">Address</label>
-                </li>
-                <li>
-                    <input id="address" name="address" type="text">
-                </li>
-                <li>
-                    <label for="email">E-Mail</label>
-                </li>
-                <li>
-                    <input id="email" name="email" type="email">
-                </li>
-                <li>
-                    <label for="Message">Message</label>
-                </li>
-                <li>
-                    <textarea form="contactus" name="message" placeholder="Enter message here..."></textarea>
-                </li>
+                    <li class="label">
+                        <label for="message">Message</label>
+                    </li>
+                    <li>
+                        <textarea form="contactus" name="message" placeholder="Enter message here..."></textarea>
+                    </li>
                 </ul>
+            </div>
+        </div>
 
-            </form>
         </body>

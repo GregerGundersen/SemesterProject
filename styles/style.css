@@ -38,6 +38,15 @@ html a{
     font-family: 'Barlow Condensed','sans-serif';
 }
 
+html ul, html li, html label{
+    font-family: 'Roboto', 'sans-serif';
+}
+
+.flexcenter{
+    display: flex;
+    justify-content: center;
+}
+
 body {
     background-color: var(--Background);
     margin: 0px 50px;
@@ -49,12 +58,22 @@ body {
     grid-gap: 20px;
 }
 
+.nomargin{
+    margin: 0;
+}
+
+.lh1{
+    line-height: 1;
+}
+.lh01{
+    line-height: 0.1;
+}
 /* NAVIGATION */
 .main-nav ul{
     display: grid;
     padding: 0;
     list-style: none;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(7, 1fr);
 }
 
 .main-nav a{
@@ -66,6 +85,36 @@ body {
     font-family: 'Barlow Condensed', 'sans-serif';
     font-weight: 600;
     color: black;
+}
+
+#logo{
+    background-image: url(../media/StaticLogo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: .5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+/*     margin: 1rem; */
+    height: 61px;
+    width: 61px;
+    padding: 0;
+
+
+}
+
+#logo:hover{
+    background-image: url(../media/AnimatedLogo.gif);
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: .5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+/*     margin: 1rem; */
+    height: 61px;
+    width: 61px;
+    padding: 0;
 }
 
 #menu1:hover{
@@ -101,14 +150,11 @@ body {
 
 /*INDEX - TOP CONTAINER */
 .indexheader {
-    background-image: url(../media/MuseumExterior.jpg);
+    background-image: url(../media/MuseumExteriorResizeCrop.jpg);
     background-size: cover;
     background-position: center;
     height: 37vw;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: flex-end;
+
 }
 /* TOP CONTAINER END */
 
@@ -223,14 +269,16 @@ body {
 
 #submenu1:hover{
     color: #264653;
-    background-color: white;
+    background-color: #FFF5E6;
+    border: 1px solid #264653;
 }
 #submenu1 a:hover{
-    color:#264653
+    color:#264653;
 }
 
 #submenu2:hover{
-    background-color: white;
+    background-color: #FFF5E6;
+    border: 1px solid #2A9D8F;
 }
 
 #submenu2 a:hover{
@@ -238,7 +286,8 @@ body {
 }
 
 #submenu3:hover{
-    background-color: white;
+    background-color: #FFF5E6;
+    border: 1px solid #E9C46A;
 }
 
 #submenu3 a:hover{
@@ -246,25 +295,30 @@ body {
 }
 
 #submenu4:hover{
-    background-color: white;
+    background-color: #FFF5E6;
+    border: 1px solid #F4A261;
 }
 
 #submenu4 a:hover{
     color:#F4A261;
 }
 #submenu5:hover{
-    background-color: white;
+    background-color: #FFF5E6;
+    border: 1px solid #E76F51;
 }
 #submenu5 a:hover{
     color: #E76F51;
 }
 
 #submenu6:hover{
-    background-color: white;
+    background-color: #FFF5E6;
+    border: 1px solid #EA4B23;
 }
 #submenu6 a:hover{
     color:#EA4B23;
 }
+
+
 /* SECONDARY NAVIGATION END */
 
 /*INDEX - BOTTOM CONTENT - FOR CHILDREN/TEACHER/RESEARCHERS */
@@ -280,7 +334,6 @@ body {
 
 .forchildren{
     grid-area: child;
-    margin-top: 9rem;
     background-color: var(--White);
     box-shadow: var(--shadow)
 }
@@ -302,7 +355,7 @@ body {
 }
 
 #teacherpic{
-    width:70%;
+    width:100%;
 }
 
 #researcherpic{
@@ -413,7 +466,7 @@ footer {
 
 /* Header Image */
 .exhibitionsheader {
-    background-image: url(../media/ExhibitionPictureCropped.jpg);
+    background-image: url(../media/ExhibitionResizeCropped.jpg);
     background-size: cover;
     background-position: center;
     height: 37vw;
@@ -575,55 +628,117 @@ figure h2{
 .visitgrid {
     display: grid;
     grid-gap: 100px 30px;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+    'hours admis'
+    'locat foods'
+    'shops acces';
 }
+
 
 .fas,.fab{
-    font-size: 10rem;
+    font-size: 8rem;
     color: var(--HeaderFooter);
-    margin: 50px;
+    margin-right: 2rem;;
+
 }
 
-.hours ul,li{
+.hours th,td, table{
     font-family: 'Roboto', 'sans-serif';
     list-style-type: none;
     margin: 0;
     padding: 0;
+    text-align: right; 
+}
+.hours td{
+    padding-left: 1rem;
 }
 
+
+
 .visittext{
-    max-width: 30vw;
+    width: 30vw;
 }
 
 .hours{
     display: flex;
     justify-content: center;
+    grid-area: hours;
+    align-items: center;
+    
 }
 
 .admission{
     display: flex;
-    justify-content: space-evenly
+    justify-content: center;
+    grid-area: admis;
+    align-items: center;
 }
 
 .location{
     display: flex;
-    justify-content: space-evenly
+    justify-content: center;
+    grid-area: locat;
+    align-items: center;
 }
 
 .food{
     display: flex;
-    justify-content: space-evenly
+    justify-content: center;
+    grid-area: foods;
+    align-items: center;
 }
 
 .shop{
     display: flex;
-    justify-content: space-evenly
+    justify-content: center;
+    grid-area: shops;
+    align-items: center;
 }
 
 .accessibility{
     display: flex;
-    justify-content: space-evenly
+    justify-content: center;
+    grid-area: acces;
+    align-items: center;
 }
+
+/* Media Queries - Visit */
+/* TABLET QUERIES (iPad Pro, 834px) */
+@media (max-width: 900px) {
+.visitgrid{
+    display: grid;
+    grid-gap: 100px 30px;
+    grid-template-areas: 
+    'hours'
+    'admis'
+    'locat'
+    'foods'
+    'shops'
+    'acces';
+}
+}
+
+
+/* PHONE QUERIES(iPhone 8, 414px) */
+@media (max-width: 420px) {
+    .hours, .admission, .location, .food, .shop, .accessibility{
+        flex-direction: column;
+    }
+    .visittext{
+        width: 80vw;
+    }
+    .visittext h2{
+        text-align: center;
+    }
+    .fab, .fas{
+        margin: 0;
+    }
+    .fa-clock{
+        margin-top: 2rem;
+    }
+}
+
+
 
 /* Visit End */
 
@@ -663,6 +778,18 @@ figure h2{
         margin-top: 5px;
 }
 
+/* Get Involved - Media Queries */
+
+/* PHONE QUERIES(iPhone 8, 414px) */
+@media (max-width: 420px) {
+
+    .getinvolvedgrid {
+        grid-gap: 20px 30px;
+        grid-template-areas: 
+        'volun'
+        'intern';
+    }
+}
 /* Get Involved End */
 
 /* Contact */
@@ -684,6 +811,37 @@ figure h2{
     margin-top: 5px;
 }
 
-.formwidth{
-    max-width: 30vw;
+#contactus ul, .textbox ul, .contact{
+    list-style: none;
+    padding: 0;
+}
+
+.flexform{
+    display: flex;
+}
+
+input, textarea, select{
+    outline: 0;
+    border-width: 0 0 2px 2px;
+    border-radius: 5px;
+    border-color: var(--HeaderFooter);
+    background-color: var(--Background);
+    width: 200px;
+}
+
+input:focus, textarea:focus, select:focus{
+    border-color: var(--Accent);
+}
+
+.textbox{
+    margin-left: 5rem;
+}
+textarea{
+    height: 227px;
+    width: 400px;
+}
+
+.label{
+    padding: 15px 0 2px 0;
+    overflow: visible;
 }
