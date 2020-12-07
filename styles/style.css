@@ -1,5 +1,8 @@
 /* CSS Variables */
 :root {
+    --primary-color: rgba(13,110,139,0.75);
+    --overlay-color: rgba(24,39,51,0.85);
+    --menu-speed: 0.75s;
     --HeaderFooter: #175676;
     --White: #FFFFFF;
     --Black: #000000;
@@ -146,7 +149,181 @@ body {
     background-color: #EA4B23;
     color: white;
 } 
+
+/* MOBILE NAVIGATION */
+
+/* TABLET QUERIES (iPad Pro, 834px) */
+@media (max-width: 900px) {
+    .main-nav{
+        display: none;
+    }
+
+    .showcase {
+        position: relative;
+    }
+
+    .showcase:before{
+        content:'';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+
+/*     .showcase .showcase-inner{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 100%;
+    } */
+
+    .menu-wrap{
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+    .menu-wrap .toggler{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        width: 50px;
+        height: 50px;
+        opacity: 0;
+    }
+
+    .menu-wrap .hamburger{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 60px;
+        height: 60px;
+        padding: 1rem;
+        background: var(--primary-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Hamburger Line/Icon */
+    .menu-wrap .hamburger > div{
+        position: relative;
+        width: 100%;
+        height: 2px;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.4s ease;
+    }
+
+    .menu-wrap .hamburger > div:before,
+    .menu-wrap .hamburger > div:after{
+        content: '';
+        position: absolute;
+        z-index: 1;
+        top: -10px;;
+        width: 100%;
+        height: 2px;
+        background-color: white;
+    }
+    .menu-wrap .hamburger > div:after{
+        top: 10px;
+    }
+
+    /* Toggler Animate */
+    .menu-wrap .toggler:checked + .hamburger > div{
+        transform: rotate(135deg);
+    }
+
+    .menu-wrap .toggler:checked + .hamburger > div::before,
+    .menu-wrap .toggler:checked + .hamburger > div:after{
+        top:0;
+        transform: rotate(90deg);
+    }
+
+    .menu-wrap .menu{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        visibility: hidden;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .menu-wrap .menu > div{
+    background: var(--overlay-color);
+    border-radius: 50%;
+    width: 200vw;
+    height: 200vw;
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center; 
+    transition: all 0.4s ease;
+    transform: scale(0);
+    }
+
+    .menu-wrap .menu > div > div{
+        text-align: center;
+        max-width: 90vw;
+        max-height: 100vh;
+        transition: opacity 0.4s ease;
+        opacity: 0;
+    }
+
+    /* Style Menu Options */
+    .menu-wrap .menu > div > div > ul > li{
+        list-style: none;
+        color: white;
+        font-size: 1.5rem;
+        padding: 1rem;
+    }
+
+    .menu-wrap .menu > div > div > ul > li > a{
+        color: inherit;
+        text-decoration: none;
+        transition: color 0.4 ease;
+    }
+
+    /* Show Menu */
+    .menu-wrap .toggler:checked ~ .menu{
+        visibility: visible;
+    }
+
+    .menu-wrap .toggler:checked ~ .menu > div{
+        transform: scale(1);
+        transition-duration: var(--menu-speed);
+    }
+
+    .menu-wrap .toggler:checked ~ .menu > div > div{
+        opacity: 1;
+        transition: opacity 0.4 ease;
+    }
+}
+
+/* DESKTOP QUERIES */
+@media (min-width: 901px) {
+    .menu-wrap{
+        display: none;
+    }
+}
+
+
 /* NAVIGATION END */
+
+
 
 /*INDEX - TOP CONTAINER */
 .indexheader {
@@ -820,7 +997,7 @@ figure h2{
     display: flex;
 }
 
-input, textarea, select{
+.contactinput, textarea, select{
     outline: 0;
     border-width: 0 0 2px 2px;
     border-radius: 5px;
@@ -829,7 +1006,7 @@ input, textarea, select{
     width: 200px;
 }
 
-input:focus, textarea:focus, select:focus{
+.contactinput:focus, textarea:focus, select:focus{
     border-color: var(--Accent);
 }
 
