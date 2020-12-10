@@ -259,13 +259,13 @@ body {
         content: '';
         position: absolute;
         z-index: 1;
-        top: -10px;;
+        top: -15px;;
         width: 100%;
         height: 2px;
         background-color: white;
     }
     .menu-wrap .hamburger > div:after{
-        top: 10px;
+        top: 15px;
     }
 
     /* Toggler Animate */
@@ -820,6 +820,8 @@ body {
         'teacher'
         'research';
     }
+
+
 }
 
 /* PHONE QUERIES(iPhone 8, 414px) */
@@ -843,6 +845,10 @@ body {
 
     .secondary-nav {
         grid-template-columns: repeat(auto-fit, minmax(180px,1fr));
+    }
+
+    .indexheader {
+        height: 58vw;
     }
 }
 /* INDEX - END */
