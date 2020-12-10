@@ -32,10 +32,13 @@ html h2 {
     font-weight: 500;
     color: var(--HeaderFooter);
     font-size: 2rem;
+    padding: 0 20px;
 }
 
 html figcaption{
     font-family: 'Roboto', 'sans-serif';
+    margin-bottom: 10px;
+    padding: 0 20px;
 }
 
 html a{
@@ -66,11 +69,24 @@ body {
     margin: 0;
 }
 
+
+
 .lh1{
     line-height: 1;
 }
-.lh01{
-    line-height: 0.1;
+
+.button{
+    display:inline-block;
+    border: none;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    transition: opactiy 1s ease-in;
+}
+
+.button:hover{
+    opacity: 0.7s;
 }
 /* NAVIGATION */
 .main-nav ul{
@@ -117,20 +133,7 @@ body {
     margin: auto;
 }
 
-#logo:hover{
-    background-image: url(../media/AnimatedLogo.gif);
-    background-repeat: no-repeat;
-    background-size: contain;
-    transition: .5s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-/*     margin: 1rem; */
-    height: 61px;
-    width: 61px;
-    padding: 0;
-}
-
+/* Hover effect on top navigation */
 #menu1:hover{
     background-color: #264653;
     color: white;
@@ -160,6 +163,31 @@ body {
     background-color: #EA4B23;
     color: white;
 } 
+
+/* Indicating which page you're currently on */
+.menu1active{
+    border-bottom: 2px solid #264653;
+}
+
+.menu2active{
+    border-bottom: 2px solid #2A9D8F;
+}
+
+.menu3active{
+    border-bottom: 2px solid #E9C46A;
+}
+
+.menu4active{
+    border-bottom: 2px solid #F4A261;
+}
+
+.menu5active{
+    border-bottom: 2px solid #E76F51;
+}
+
+.menu6active{
+    border-bottom: 2px solid #EA4B23;
+}
 
 /* MOBILE NAVIGATION */
 
@@ -348,7 +376,7 @@ body {
 
 /*INDEX - TOP CONTAINER */
 .indexheader {
-    background-image: url(../media/MuseumExteriorResizeCrop.jpg);
+    background-image: url(../media/Museumrszfnlmin.jpg);
     background-size: cover;
     background-position: center;
     height: 37vw;
@@ -361,6 +389,7 @@ body {
 .introduction {
     box-shadow: var(--shadow);
     background-color: var(--White);
+    margin-top: 50px;
     display: grid;
     grid-template-areas: 
     'image text'
@@ -382,6 +411,7 @@ body {
 .introductiontext h1{
     font-size: 2.5rem;
     margin: 0;
+    padding: 0 20px;
 }
 
 .introductiontext h1::after{
@@ -393,6 +423,10 @@ body {
     border-radius: 3px;
     max-width: 220px;
     margin-top: 5px;
+}
+
+.introductiontext p{
+    padding: 0 20px;
 }
 
 
@@ -564,10 +598,202 @@ body {
 
 /* FOOTER */
 
-footer {
+.sitefooter {
     background-color: #175676;
     color: white;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
 }
+
+.sitefooter h2{
+    color: var(--Background);
+    margin: 10px 0 5px 0;
+    font-size: 2.5rem;
+    padding: 0;
+}
+
+/* Social Media icons, size and color */
+.socialicons{
+    display: grid;
+    grid-template-columns: repeat(2, 4rem);
+    grid-gap: 30px;
+    margin: auto;
+}
+
+#footerig{
+    background:-webkit-linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 0.5s;
+    background-size: 200%;
+    font-size: 4rem;
+}
+
+#footerig:hover{
+    background-position: right center;
+}
+
+#footerfb{
+    background:-webkit-linear-gradient(120deg, #3b5998, #FFFFFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 0.5s;
+    background-size: 200%;
+    font-size: 4rem;
+}
+
+#footerfb:hover{
+    background-position: right center;
+}
+
+#footertw{
+    background:-webkit-linear-gradient(45deg, #66757f, #00ACEE, #36D8FF, #f5f8fa, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 0.5s;
+    background-size: 200%;
+    font-size: 4rem;
+}
+
+#footertw:hover{
+    background-position: right center;
+}
+
+#footerta{
+    background:-webkit-linear-gradient(120deg, #00af87, #FFFFFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 0.5s;
+    background-size: 200%;
+    font-size: 4rem;
+}
+
+#footerta:hover{
+    background-position: right center;
+}
+
+#footerfb, #footerig{
+    margin-top: 20px;
+}
+
+#footertw, #footerta{
+    margin-bottom: 20px;
+}
+
+/* Museum Logo */
+.footericon{
+    max-width: 300px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footericon img{
+    max-width: 60%;
+}
+
+
+/* Position and button */
+.newsletter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.newsletter h2{
+    margin-bottom: 20px;
+}
+
+.footercontact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footercontact a{
+    text-decoration: none;
+    color: var(--Background);
+    margin: 5px 0;
+    font-size: 1.5rem;
+}
+
+#footerphone, #footermail{
+    font-size: 1rem;
+    color: var(--Background);
+    margin: 0 8px 0 0;
+}
+
+
+
+.footerbutton{
+    border-radius: 5px;
+    text-decoration: none;
+    color: var(--Background);
+    padding: 1rem;
+    font-size: 1.5rem;
+    border: 2px solid var(--Background);
+    text-align: center;
+    max-width: 7rem;
+}
+
+.footerbutton:hover{
+    background-position: right center;
+}
+
+/*FOOTER - MEDIA QUERIES */
+
+/* TABLET QUERIES (iPad Pro, 834px) */
+@media (max-width: 900px) {
+    #footerig, #footerfb, #footertw, #footerta{
+        font-size: 3rem;
+    }
+
+    .footercontact a{
+        font-size: 1rem;
+    }
+
+    .sitefooter h2, .newsletter h2{
+        margin: 0;
+    }
+}
+
+/* PHONE QUERIES(iPhone 8, 414px) */
+@media (max-width: 420px) {
+    .sitefooter{
+        padding: 0 10px;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .footericon{
+        max-width: 100%;
+    }
+
+    .footericon img{
+        max-width: 20%;
+    }
+
+    .footerbutton{
+        margin: 10px 0;
+    }
+
+    .socialicons{
+        grid-template-columns: repeat(4,1fr);
+        grid-gap: 30px 50px;
+    }
+
+    #footerig, #footertw, #footerta, #footerfb{
+        margin: 10px 0 0 0;
+    }
+
+    .footericon{
+        margin-top: 10px;
+    }
+
+
+}
+
+
 
 /*INDEX - MEDIA QUERIES */
 
@@ -832,6 +1058,10 @@ figure h2{
     'shops acces';
 }
 
+.visitgrid h2{
+    padding: 0;
+}
+
 
 .fas,.fab{
     font-size: 8rem;
@@ -1009,6 +1239,14 @@ figure h2{
     margin-top: 5px;
 }
 
+.contactintro table, .contactintro th, .contactintro td{
+    text-align: left;
+}
+
+#th1{
+    font-size: 1.2rem;
+}
+
 #contactus ul, .textbox ul, .contact{
     list-style: none;
     padding: 0;
@@ -1027,6 +1265,10 @@ figure h2{
     width: 200px;
 }
 
+select{
+    font-size: 1rem;
+}
+
 .contactinput:focus, textarea:focus, select:focus{
     border-color: var(--Accent);
 }
@@ -1042,4 +1284,23 @@ textarea{
 .label{
     padding: 15px 0 2px 0;
     overflow: visible;
+}
+
+.cfh2{
+    padding: 0;
+}
+
+/* TABLET QUERIES (iPad Pro, 834px) */
+@media (max-width: 900px) {
+    .flexform{
+        flex-direction: column;
+    }
+
+    .textbox{
+        margin: 0;
+    }
+
+    textarea{
+        width: 90vw;
+    }
 }
